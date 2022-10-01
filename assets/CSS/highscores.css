@@ -11,3 +11,28 @@ body {
     font-size: 2.8rem;
     margin-bottom: 0.5rem;
 }
+
+@media screen and (max-width: 768px) {
+    div {
+        min-width: 80%;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    * {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+    div {
+        min-width: 100%;
+    }
+    h1 {
+        font-size: 38px;
+    }
+    * {
+        font-size: 8px;
+    }
+}

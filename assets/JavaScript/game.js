@@ -124,7 +124,7 @@ incrementScore = num => {
 var interval = setInterval(function(){
     document.getElementById('timer').innerHTML=count;
     count--;
-    if (count === 0 || count < 0){
+    if (count === -2 || count < -2){
       clearInterval(interval);
       window.location = "../html/end.html";   
       document.getElementById('timer').innerHTML='Done';

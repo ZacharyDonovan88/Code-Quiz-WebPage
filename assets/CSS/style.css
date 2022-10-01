@@ -139,7 +139,26 @@ input::placeholder {
 }
 
 @media screen and (max-width: 768px) {
-    .choice-container {
-        min-width: 40rem;
+    div {
+        min-width: 80%;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    * {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+    div {
+        min-width: 100%;
+    }
+    h1 {
+        font-size: 38px;
+    }
+    * {
+        font-size: 8px;
     }
 }
