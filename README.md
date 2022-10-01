@@ -14,6 +14,7 @@ If the users don't complete the quiz before the time limit the game ends.
 - progress bar could be added to media query (NOTE: could not figure out how to make progress bar run in media query)
 - needs more coding in media query to make the interface more cleaner
 - add more questions
+- add 'play again button on end.html. (NOTE: Deleted "play again" button on end.html as I coudn't fix a bug. The bug would resume from where player left off instead of resetting the score and timer)
 
 ## Notes
 WebPage has been tested and should be compatible on all supported browsers including mobile devices.
