@@ -83,8 +83,101 @@ body {
     font-size: 2.3rem;
 }
 
+
+
+@media screen and (max-width: 958px) {
+    div {
+        min-width: 100%;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    * {
+        font-size: 15px;
+    }
+
+    #progressBar {
+        display: none;
+    }
+
+    #mediaPosition {
+        position:absolute; left:80px; top:20px; 
+    }
+
+    #score {
+        position:absolute; left:430px; top:35px;
+    }
+}
+
 @media screen and (max-width: 768px) {
-    .choice-container {
-        min-width: 80%;
+    div {
+        min-width: 100%;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    * {
+        font-size: 15px;
+    }
+
+    #progressBar {
+        display: none;
+    }
+
+    #mediaPosition {
+        position:absolute; left:80px; top:20px; 
+    }
+
+    #score {
+        position:absolute; left:430px; top:35px;
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+    div {
+        min-width: 100%;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    * {
+        font-size: 8px;
+    }
+
+    #progressBar {
+        display: none;
+    }
+
+    #mediaPosition {
+        position:absolute; left:80px; top:20px; 
+    }
+
+    #score {
+        position:absolute; left:180px; top:20px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    div {
+        min-width: 100%;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    * {
+        font-size: 8px;
+    }
+
+    #progressBar {
+        display: none;
+    }
+
+    #mediaPosition {
+        position:absolute; left:80px; top:20px; 
+    }
+
+    #score {
+        position:absolute; left:120px; top:20px;
     }
 }
