@@ -9,6 +9,7 @@ let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+let count = 60;
 
 let questions = [
     {
@@ -48,6 +49,15 @@ let questions = [
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 4;
 
+
+
+
+
+function handleWrongAnswer(currentCount) {
+    let newCount = currentCount - 5;
+    count = newCount;
+}
+
 startGame = () => {
     questionCounter = 0;
     score = 0;
@@ -57,9 +67,8 @@ startGame = () => {
 
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score); 
-        
-        return window.location.assign('../Code-Quiz-WebPage/assets/html/end.html');
+        localStorage.setItem('00', score); 
+        return window.location.assign('../html/end.html');
     }
 
     questionCounter++
@@ -92,6 +101,8 @@ choices.forEach(choice => {
 
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS);
+        } else {
+            handleWrongAnswer(count);
         }
 
         selectedChoice.parentElement.classList.add(classToApply);
@@ -103,9 +114,22 @@ choices.forEach(choice => {
     })
 })
 
+
+
 incrementScore = num => {
     score +=num;
     scoreText.innerText = score;
 }
+
+var interval = setInterval(function(){
+    document.getElementById('timer').innerHTML=count;
+    count--;
+    if (count === 0 || count < 0){
+      clearInterval(interval);    
+      document.getElementById('timer').innerHTML='Done';
+      // or...
+      alert("You're out of time!");
+    }
+  }, 1000);
 
 startGame();

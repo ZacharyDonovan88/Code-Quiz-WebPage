@@ -1,6 +1,7 @@
 /* General */
 body {
     color: black;
+    overflow-x: hidden;
 }
 
 .choice-container {
@@ -10,7 +11,7 @@ body {
     border-radius: 4px;
     background: rgb(18, 93, 255);
     font-size: 3rem;
-    min-width: 80rem;
+    min-width: 100%;
 }
 
 .choice-container:hover {
@@ -67,8 +68,23 @@ body {
     width: 0%;
 }
 
+
+#timer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#timer-full {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#timer-text {
+    font-size: 2.3rem;
+}
+
 @media screen and (max-width: 768px) {
     .choice-container {
-        min-width: 40rem;
+        min-width: 80%;
     }
 }
