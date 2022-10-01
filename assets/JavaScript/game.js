@@ -9,7 +9,7 @@ let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-let count = 60;
+let count = 40;
 
 let questions = [
     {
@@ -125,8 +125,10 @@ var interval = setInterval(function(){
     document.getElementById('timer').innerHTML=count;
     count--;
     if (count === 0 || count < 0){
-      clearInterval(interval);    
+      clearInterval(interval);
+      window.location = "../html/end.html";   
       document.getElementById('timer').innerHTML='Done';
+      localStorage.setItem('mostRecentScore', score);
       // or...
       alert("You're out of time!");
     }
